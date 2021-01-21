@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: seethakrishnanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seethakrishnanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: seethakrishnanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: seethakrishnanpipelinesjavascriptdocker 
+          image: seethacontainerregistry.azurecr.io/seethakrishnanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
